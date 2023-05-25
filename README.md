@@ -1,5 +1,5 @@
 # SQl Task
-Refer file 'mediamath_sql_assessment.md'
+Refer file ------> 'mediamath_sql_assessment.docx'
 
 # Business Intelligence - Data Engineer Interview Task
 1. Spin up and connect to a t1.micro instance on AWS (this is eligible for the AWS free tier – for 1 year)
