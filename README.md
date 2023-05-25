@@ -1,4 +1,7 @@
-## Business Intelligence - Data Engineer Interview Task
+# SQl Task
+Refer file 'mediamath_sql_assessment.md'
+
+# Business Intelligence - Data Engineer Interview Task
 1. Spin up and connect to a t1.micro instance on AWS (this is eligible for the AWS free tier – for 1 year)
 
     -> bucket name - mediamath-s3-bucket
