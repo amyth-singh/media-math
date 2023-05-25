@@ -61,14 +61,14 @@
         
         -> gen_file_gzip_compression : ran in 109.85 seconds
 
-# split.py
+## split.py
     This script splits the compressed 'source.csv.gz' file into 10 equal parts by creating a directory to store files, calculates the no. of rows per split file, converts them into dataFrames, creates filenames and writes the data to destination ('source_split_files' folder)
     
     9. How long does the process take?
        
        -> gen_file_split : ran in 120.06 seconds
 
-# transfer_to_s3.py
+## transfer_to_s3.py
     This script connects to the 'mediamath-s3-bucket', takes all the files from 'source_split_files' and uploads it in a loop whilst naming the files.
 
     10. Please provide a link  to download one of the 10 files ex: part-3.csv.gz' 
@@ -77,7 +77,7 @@
 
     Note - Ensure that you are using the generated URL as a direct download link and not trying to access it through a web browser. The generated URL should be used in a programmatic way or with a download manager tool, rather than directly in a browser.
 
-# bonus
+## bonus
     11. What approach would you take if you needed to split 32TB of data?
 
     -> There are several approaches we can consider to accomplish this.
