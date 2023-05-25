@@ -82,16 +82,16 @@ Note - Ensure that you are using the generated URL as a direct download link and
 
 -> There are several approaches we can consider to accomplish this.
 
-    a. parallel processing - to speed up the splitting process, we can leverage parallel processing techniques. Python provides libraries such as 'multiprocessing' and 'concurrent.futures'.
+a. parallel processing - to speed up the splitting process, we can leverage parallel processing techniques. Python provides libraries such as 'multiprocessing' and 'concurrent.futures'.
 
-    b. leverage streaming - Instead of loading the entire dataset file into memory, we can use the streaming approach where data is processes in small chunks or streams, reading and writing the data in a sequential manner without loading the entire dataset into memory, this won't overwhelm the system's resources
+b. leverage streaming - Instead of loading the entire dataset file into memory, we can use the streaming approach where data is processes in small chunks or streams, reading and writing the data in a sequential manner without loading the entire dataset into memory, this won't overwhelm the system's resources
 
-    c. distributed computing - if the data splitting task is large and requires processing on multiple machines, we can use Apache Spark, PySpark or Spark Streaming or even Dask, these frameworks allow us to split, transform and anlyse large datasets across clusters if needed.
+c. distributed computing - if the data splitting task is large and requires processing on multiple machines, we can use Apache Spark, PySpark or Spark Streaming or even Dask, these frameworks allow us to split, transform and anlyse large datasets across clusters if needed.
 
-    d. optimise file formatting - consider using optimised file formats that are designed for large-scale processing like Parquet, Arrow etc. they can even reduce storage space and speed up processing.
+d. optimise file formatting - consider using optimised file formats that are designed for large-scale processing like Parquet, Arrow etc. they can even reduce storage space and speed up processing.
 
-    e. cloud solutions - utilising cloud-based services like AWS S3, Google Cloud Storage, AWS Glue, Google Dataflow etc.. offer scalable storage and processing capabilities, allowing efficient large data handling and splitting.
+e. cloud solutions - utilising cloud-based services like AWS S3, Google Cloud Storage, AWS Glue, Google Dataflow etc.. offer scalable storage and processing capabilities, allowing efficient large data handling and splitting.
 
-    f. optimise infrastructure - 32TB would require robust hardware infrastructure, ensuring that we have enough storage system capacity and performance alongside workload handling capabilities will help, using speed-storage-solutions like SSDs, or distributed file systems to help I/O performance.
+f. optimise infrastructure - 32TB would require robust hardware infrastructure, ensuring that we have enough storage system capacity and performance alongside workload handling capabilities will help, using speed-storage-solutions like SSDs, or distributed file systems to help I/O performance.
 
-regardless of any optimisation, 32TB files will take time and its important to plan before execution and also test different approaches.}
+regardless of any optimisation, 32TB files will take time and its important to plan before execution and also test different approaches.
