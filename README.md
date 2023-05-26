@@ -4,7 +4,7 @@ Refer the 'BUSINESS_INTELLIGENCE_TASK.md' file for all answers
 # SQL Assessment - Task
 Refer the 'SQL_ASSESSMENT_TASK.md' file for all answers
 
-# gen.py
+## gen.py
 This script imports modules :
 
 ```
@@ -74,3 +74,29 @@ get_distribution_of_integers = GenFileAnalysis.gen_file_distribution_of_integers
 get_row_with_most_vowels = GenFileAnalysis.gen_file_vowel_analyser
 get_gzip_compressed_file_size = GenFileSizeAnalysis.gen_file_size_checker
 ```
+
+## split.py
+This script imports modules:
+
+```
+pandas
+time
+os
+gzip
+math
+```
+
+Has `2` classes :
+
+```
+Decorators -> custom-python-decorator to measure processing time of classes/functions.
+
+class Decorators:
+    def run_timer(func):
+
+GenFileSplit -> splits compressed_file into 10 parts, gzips it.
+
+class GenFileSplit:
+    def gen_file_split():
+```
+
