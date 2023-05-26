@@ -102,7 +102,7 @@ This script connects to the 'mediamath-s3-bucket', takes all the files from 'sou
 
 -> There are several approaches we can consider to accomplish this.
 
-a. parallel processing - to speed up the splitting process, we can leverage parallel processing techniques. Python provides libraries such as 'multiprocessing' and 'concurren@t.futures'.
+a. parallel processing - to speed up the splitting process, we can leverage parallel processing techniques. Python provides libraries such as 'multiprocessing' and 'concurrent.futures'.
 
 b. leverage streaming - Instead of loading the entire dataset file into memory, we can use the streaming approach where data is processes in small chunks or streams, reading and writing the data in a sequential manner without loading the entire dataset into memory, this won't overwhelm the system's resources
 
