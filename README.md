@@ -4,7 +4,7 @@ Refer the 'BUSINESS_INTELLIGENCE_TASK.md' file for all answers
 # SQL Assessment - Task
 Refer the 'SQL_ASSESSMENT_TASK.md' file for all answers
 
-## gen.py
+# gen.py
 This script imports modules :
 
 ```
@@ -77,7 +77,7 @@ get_row_with_most_vowels = GenFileAnalysis.gen_file_vowel_analyser
 get_gzip_compressed_file_size = GenFileSizeAnalysis.gen_file_size_checker
 ```
 
-## split.py
+# split.py
 This script imports modules:
 
 ```
