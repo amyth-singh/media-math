@@ -27,6 +27,7 @@
 
 5. What is the distribution of 'integer1'? Which is most common?
 
+```
     -> Most occured Integer : 9
     
     COLUMN
@@ -41,6 +42,7 @@
     7     2302288
     1     2301803
     2     2301092
+```
 
 6. Which row has the most vowels (considering Columns String1 and String2)?
 
