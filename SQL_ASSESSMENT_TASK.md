@@ -37,6 +37,7 @@ This query performs an inner join between the 'impressions' and 'events' tables 
 
 How many attributed converters fired pixel ID 101293 and how many attributed conversions did not fire pixel ID 101293 before conversion (please write this in one query)?
 
+```
 SELECT COUNT(DISTINCT events.user_id) AS attributed_converters_fired_pixel, COUNT(DISTINCT conversions.user_id) AS attributed_conversiona_no_pixel 
 FROM events
 JOIN conversions
@@ -46,6 +47,7 @@ ON conversions.user_id = impressions.user_id
 AND impressions.timestamp < conversions.conversion_timestamp
 WHERE events.pixel_id = 101293
 AND impressions.user_id IS NULL;
+```
 
 The query uses a LEFT JOIN to connect the 'impressions' table with the 'conversions' table based on the 'user_id', ensuring that we consider only conversions that occured after any related impressions. Then, it filters for the 'pixel_id' 101293 in the 'events' table to count attrributed converters that fired the pixel. Finally, it includes a condition in the WHERE clause to select only those conversions that didn't have any matching impression i.e, attributed conversions that did not fire pixel ID 101293 before conversion.
 
