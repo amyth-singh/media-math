@@ -1,22 +1,29 @@
 # Business Intelligence - Data Engineer Task
 1. Spin up and connect to a t1.micro instance on AWS (this is eligible for the AWS free tier – for 1 year)
 
+```
     -> bucket name - mediamath-s3-bucket
     -> region - EU (London) eu-west-2
     -> ARN - arn:aws:s3:::mediamath-s3-bucket
+```
 
 2. Install Python 3 (and any other packages you may prefer) and create a script (gen.py) that can generate a 1GB file
 
+```
     -> # Refer gen.py file
+```
 
 3. How many rows did you generate? why?
 
+```
     -> Total number of rows generated : 23031037
     
     -> The total number of rows generated were limited to the defined filesize, as in, the function created the above rows based on the filesize criteria, once the file size reached 1GB it stopped and outputted the file.
+```
 
 4. What is the content of the last row? How can you easily find this?
-    
+
+```    
     -> last_row = df.iloc[-1] # Refer gen.py to find function
 
     COLUMNS                         ROWS
@@ -24,6 +31,7 @@
     integer1                               7
     string1          wAEdrLZGSzDEbppsYvORDSJ
     string2     hOpUuSgybzkfGPfGgsKYAGQsrVWF
+```
 
 5. What is the distribution of 'integer1'? Which is most common?
 
@@ -46,6 +54,7 @@
 
 6. Which row has the most vowels (considering Columns String1 and String2)?
 
+```
     -> Row number : 4831100
 
     COLUMNS                              ROWS
@@ -54,28 +63,37 @@
     string1            ikSlDVrKRsuuvkHVThicuoeOJ
     string2     GcvHBReXPYDoIeaZUcuGViCgouPkOaui
     v_count                                   18
+```
 
 7. How large is a compressed (gzip) version of this file?
-    
+
+```    
     -> Compressed File Size : 672754.35
+```
 
 8.  How long did the compression process take?
-    
+
+```    
     -> gen_file_gzip_compression : ran in 109.85 seconds
+```
 
 ## split.py
 This script splits the compressed 'source.csv.gz' file into 10 equal parts by creating a directory to store files, calculates the no. of rows per split file, converts them into dataFrames, creates filenames and writes the data to destination ('source_split_files' folder)
 
 9. How long does the process take?
-    
+
+```    
     -> gen_file_split : ran in 120.06 seconds
+```
 
 ## transfer_to_s3.py
 This script connects to the 'mediamath-s3-bucket', takes all the files from 'source_split_files' and uploads it in a loop whilst naming the files.
 
 10. Please provide a link  to download one of the 10 files ex: part-3.csv.gz' 
 
+```
 -> 'https://mediamath-s3-bucket.s3.amazonaws.com/part-3.csv.gz?AWSAccessKeyId=AKIASVUN4TFQRNO4CFAO&Signature=XmHTeYgDARRMJZD8kVhiM2gNZhk%3D&Expires=1685058707'
+```
 
 Note - Ensure that you are using the generated URL as a direct download link and not trying to access it through a web browser. The generated URL should be used in a programmatic way or with a download manager tool, rather than directly in a browser.
 
