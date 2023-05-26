@@ -18,30 +18,30 @@ NOTE : I've used BigQuery SQL to solve the below tests
 
 How many users were served an impression per day during September?
 
-```
+`
 SELECT DATE(timestamp) AS date, COUNT(DISTINCT(user_id)) AS impression_count 
 FROM impressions
 WHERE timestamp >= '2023-09-01 00:00:00' AND timestamp < '2023-10-01 00:00:00'
 GROUP BY DATE(timestamp);
-```
+`
 
 The query extracts date from the timestamp using date() function and groups the results by date, It then counts the distict number of user IDs as impression_count to determine the number of users served as impression each day during september.
 
 How many users were served an impression and fired pixel ID 101293 in September?
 
-```
+`
 SELECT COUNT(DISTINCT impressions.user_id) AS impression_count
 FROM impressions
 INNER JOIN events
 ON impressions.user_id = events.user_id
 WHERE impressions.timestamp >= '2023-09-01 00:00:00' AND impressions.timestamp < '2023-09-01 00:00:00' AND events.pixel_id = 101293;
-```
+`
 
 This query performs an inner join between the 'impressions' and 'events' tables based on 'user_id' column. It filters the data to include only records with a timestamp in September and where the 'pixel_id' in the 'events' table matches the value 101293. Finally, it counts the distinct number of 'user_id's from the 'impressions' table that meets these conditions, giving the desired count of users served an impression and fired 'pixel_id' 101293 in September.
 
 How many attributed converters fired pixel ID 101293 and how many attributed conversions did not fire pixel ID 101293 before conversion (please write this in one query)?
 
-```
+`
 SELECT COUNT(DISTINCT events.user_id) AS attributed_converters_fired_pixel, COUNT(DISTINCT conversions.user_id) AS attributed_conversiona_no_pixel 
 FROM events
 JOIN conversions
@@ -51,7 +51,7 @@ ON conversions.user_id = impressions.user_id
 AND impressions.timestamp < conversions.conversion_timestamp
 WHERE events.pixel_id = 101293
 AND impressions.user_id IS NULL;
-```
+`
 
 The query uses a LEFT JOIN to connect the 'impressions' table with the 'conversions' table based on the 'user_id', ensuring that we consider only conversions that occured after any related impressions. Then, it filters for the 'pixel_id' 101293 in the 'events' table to count attrributed converters that fired the pixel. Finally, it includes a condition in the WHERE clause to select only those conversions that didn't have any matching impression i.e, attributed conversions that did not fire pixel ID 101293 before conversion.
 
@@ -59,7 +59,7 @@ The query uses a LEFT JOIN to connect the 'impressions' table with the 'conversi
 
 Write SQL that would output a frequency distribution for all converters before conversion. 
 
-```
+`
 SELECT conversions.pixel_id, COUNT(*) AS frequency
 FROM conversions
 LEFT JOIN impressions
@@ -67,7 +67,7 @@ ON conversions.user_id = impressions.user_id
 AND impressions.timestamp < conversions.conversion_timestamp
 WHERE impressions.user_id IS NULL
 GROUP BY conversions.pixel_id;
-```
+`
 
 The query retrieves the 'pixel_id' column from the 'conversions' table and performs a LEFT JOIN with the 'impressions' table. It matches the 'user_id' columns and checks if the impression timestamp is before the conversion timestamp. The condition 'impressions.user_id IS NULL' filters for converters that did not have any matching impresion before conversion. Finally, the query uses the GROUP BY clause to group the conversions by 'pixel_id', and the COUNT(*) function calculated the frequency of each 'pixel_id' giving the frequenct distribution, including the number of converters associated with each 'pixel_id' before conversion.
 
@@ -78,11 +78,11 @@ Please write out how you would determine what the optimal frequency is and if th
 
 To determine the optimal frequency and identify a point at which we should cap the frequency, we can analyse the distribution of impressions served to users. Here's a simple example:
 
-```
+`
 SELECT user_id, COUNT(*) AS frequency
 FROM impressions
 GROUP BY user_id;
-```
+`
 
 The above calculates the frequency of impressions for each user by grouping the data by the 'user_id' column.
 
@@ -95,7 +95,6 @@ The optimal frequency will depend on various factors such as the specific campai
 If however, at any given point the frequency becomes excessive and negatively impacts campaign performance or user experience, we should consider capping the frequency and set a limit on the number of impressions served per user.
 
 Table Schemas:
-
 
 IMPRESSIONS	 	 
 column_name	column_description	example_field
