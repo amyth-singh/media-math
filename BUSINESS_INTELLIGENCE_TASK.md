@@ -95,7 +95,7 @@ This script connects to the 'mediamath-s3-bucket', takes all the files from 'sou
 -> 'https://mediamath-s3-bucket.s3.amazonaws.com/part-3.csv.gz?AWSAccessKeyId=AKIASVUN4TFQRNO4CFAO&Signature=XmHTeYgDARRMJZD8kVhiM2gNZhk%3D&Expires=1685058707'
 ```
 
-Note - Ensure that you are using the generated URL as a direct download link and not trying to access it through a web browser. The generated URL should be used in a programmatic way or with a download manager tool, rather than directly in a browser.
+`Note - Ensure that you are using the generated URL as a direct download link and not trying to access it through a web browser. The generated URL should be used in a programmatic way or with a download manager tool, rather than directly in a browser.`
 
 ## bonus
 11. What approach would you take if you needed to split 32TB of data?
