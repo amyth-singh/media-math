@@ -15,7 +15,9 @@ pandas
 numpy
 os
 ``` 
-Creates `data` and `compressed_data` variables as resources, and contains a total of `6` classes:
+Creates `data` and `compressed_data` variables as resources.
+
+Has `6` classes:
 
 ```
 Decorators -> custom-python-decorator to measure processing time of classes/functions.
