@@ -102,3 +102,41 @@ class GenFileSplit:
     def gen_file_split():
 ```
 
+# transfer_to_s3.py
+This script uploads files on to an S3 bucket
+
+Imports modules :
+
+```
+pandas
+gen
+split
+boto3
+time
+```
+
+Creates resource variables such as :
+
+```
+access_key_id = 'AKIASVUN4TFQRNO4CFAO'
+secret_access_key = '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'
+s3 = boto3.client('s3', aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key)
+```
+
+Has `3` classes:
+
+```
+Decorators -> custom-python-decorator to measure processing time of classes/functions.
+
+class Decorators:
+    def run_timer(func):
+
+GenFileUpload -> takes compressed gzip parts and uploaded to AWS S3 bucket
+
+class GenFileUpload():
+    def gen_file_to_s3():
+
+GenFileS3Download -> Creates a donwloadable link from a file on S3
+class GenFileS3Download:
+    def gen_file_s3_download_link():
+```
