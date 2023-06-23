@@ -1,4 +1,4 @@
-# Business Intelligence - Data Engineer Task
+# BI
 1. Spin up and connect to a t1.micro instance on AWS (this is eligible for the AWS free tier – for 1 year)
 
 ```
