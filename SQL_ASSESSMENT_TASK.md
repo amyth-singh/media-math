@@ -1,4 +1,4 @@
-# SQL_ASSESSMENT_TASK
+# SQL
 
 ## Background:
 
