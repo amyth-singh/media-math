@@ -1,7 +1,7 @@
-# Business Intelligence - Data Engineer Interview Task
+# BI
 Refer the 'BUSINESS_INTELLIGENCE_TASK.md' file for all answers
 
-# SQL Assessment - Task
+# SQL
 Refer the 'SQL_ASSESSMENT_TASK.md' file for all answers
 
 ## gen.py
