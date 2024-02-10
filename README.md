@@ -116,7 +116,8 @@ time
 ```
 
 Creates resource variables such as :
-
+...
+dummy key
 ```
 access_key_id = 'AKIASVUN4TFQRNO4CFAO'
 secret_access_key = 'ftKHO49WBZqvmbAU2rFHFVsY57WcMyjKNnB1DZEK'
