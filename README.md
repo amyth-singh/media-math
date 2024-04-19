@@ -1,4 +1,9 @@
-# BI
+Objective :
+Spin up and connect to a t1.micro instance on AWS (this is eligible for the AWS free tier for a year).
+Create a gen.py file that generates a 1gb file with the fields 'id', 'integer1', 'string1', 'string2'. 
+'id' should be auto-incrementing, 'integer1' should be randomly assigned as numbers 1-10 and 'string1' and 'string2' should be random characters of length 1-32. the output file should have a header row using the comma as a delimiter and be called "source.csv"
+
+
 Refer the 'BUSINESS_INTELLIGENCE_TASK.md' file for all answers
 
 # SQL
