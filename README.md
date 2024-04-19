@@ -13,13 +13,7 @@ Create a gen.py file that generates a 1gb file with the fields 'id', 'integer1',
     -> ARN - arn:aws:s3:::gen-s3-bucket
 ```
 
-2. Install Python 3 (and any other packages you may prefer) and create a script (gen.py) that can generate a 1GB file
-
-```
-    -> # Refer gen.py file
-```
-
-3. How many rows did you generate? why?
+2. How many rows did you generate? why?
 
 ```
     -> Total number of rows generated : 23031037
@@ -27,7 +21,7 @@ Create a gen.py file that generates a 1gb file with the fields 'id', 'integer1',
     -> The total number of rows generated were limited to the defined filesize, as in, the function created the above rows based on the filesize criteria, once the file size reached 1GB it stopped and outputted the file.
 ```
 
-4. What is the content of the last row? How can you easily find this?
+3. What is the content of the last row? How can you easily find this?
 
 ```    
     -> last_row = df.iloc[-1] # Refer gen.py to find function
@@ -39,7 +33,7 @@ Create a gen.py file that generates a 1gb file with the fields 'id', 'integer1',
     string2     hOpUuSgybzkfGPfGgsKYAGQsrVWF
 ```
 
-5. What is the distribution of 'integer1'? Which is most common?
+4. What is the distribution of 'integer1'? Which is most common?
 
 ```
     -> Most occured Integer : 9
@@ -58,7 +52,7 @@ Create a gen.py file that generates a 1gb file with the fields 'id', 'integer1',
     2     2301092
 ```
 
-6. Which row has the most vowels (considering Columns String1 and String2)?
+5. Which row has the most vowels (considering Columns String1 and String2)?
 
 ```
     -> Row number : 4831100
@@ -71,13 +65,13 @@ Create a gen.py file that generates a 1gb file with the fields 'id', 'integer1',
     v_count                                   18
 ```
 
-7. How large is a compressed (gzip) version of this file?
+6. How large is a compressed (gzip) version of this file?
 
 ```    
     -> Compressed File Size : 672754.35
 ```
 
-8.  How long did the compression process take?
+7.  How long did the compression process take?
 
 ```    
     -> gen_file_gzip_compression : ran in 109.85 seconds
