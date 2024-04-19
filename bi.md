@@ -2,9 +2,9 @@
 1. Spin up and connect to a t1.micro instance on AWS (this is eligible for the AWS free tier – for 1 year)
 
 ```
-    -> bucket name - mediamath-s3-bucket
+    -> bucket name - gen-s3-bucket
     -> region - EU (London) eu-west-2
-    -> ARN - arn:aws:s3:::mediamath-s3-bucket
+    -> ARN - arn:aws:s3:::gen-s3-bucket
 ```
 
 2. Install Python 3 (and any other packages you may prefer) and create a script (gen.py) that can generate a 1GB file
